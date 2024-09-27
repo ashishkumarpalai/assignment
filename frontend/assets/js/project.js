@@ -19,18 +19,18 @@ projectForm.addEventListener('submit', async (e) => {
 
     if (editingProjectId) {
         // Update existing project
-        await putData(`http://localhost:3000/api/projects/${editingProjectId}`, data);
+        await putData(`https://assignment-x3rl.onrender.com/api/projects/${editingProjectId}`, data);
         editingProjectId = null; // Reset editing ID
     } else {
         // Create new project
-        await postData('http://localhost:3000/api/projects', data);
+        await postData('https://assignment-x3rl.onrender.com/api/projects', data);
     }
     loadProjects(); // Reload projects after submission
     projectForm.reset(); // Reset the form fields
 });
 
 async function loadProjects() {
-    const projects = await fetchData('http://localhost:3000/api/projects');
+    const projects = await fetchData('https://assignment-x3rl.onrender.com/api/projects');
     const tableBody = document.getElementById('projectsTable').querySelector('tbody');
     tableBody.innerHTML = ''; // Clear previous rows
 
@@ -53,7 +53,7 @@ async function loadProjects() {
 }
 loadProjects()
 async function editProject(id) {
-    const project = await fetchData(`http://localhost:3000/api/projects/${id}`);
+    const project = await fetchData(`https://assignment-x3rl.onrender.com/api/projects/${id}`);
     document.getElementById('projectDetails').value = project.projectDetails;
     document.getElementById('expenditure').value = project.financials.expenditure;
     document.getElementById('budget').value = project.financials.budget;
@@ -66,7 +66,7 @@ async function editProject(id) {
 }
 
 async function deleteProject(id) {
-    await deleteData(`http://localhost:3000/api/projects/${id}`);
+    await deleteData(`https://assignment-x3rl.onrender.com/api/projects/${id}`);
     loadProjects(); // Refresh list after deletion
 }
 

@@ -8,7 +8,7 @@ document.getElementById('developerForm').addEventListener('submit', function (ev
     const incorporationDate = document.getElementById('incorporationDate').value;
 
     // Make API call to create developer
-    fetch('http://localhost:3000/api/developers', {
+    fetch('https://assignment-x3rl.onrender.com/api/developers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

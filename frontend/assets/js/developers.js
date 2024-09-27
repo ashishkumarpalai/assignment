@@ -17,12 +17,12 @@ form.addEventListener('submit', async (e) => {
 
     if (currentEditId) {
         // Update existing developer
-        const response = await putData(`http://localhost:3000/api/developers/${currentEditId}`, data);
+        const response = await putData(`https://assignment-x3rl.onrender.com/api/developers/${currentEditId}`, data);
         console.log(response);
         currentEditId = null; // Reset edit ID
     } else {
         // Add new developer
-        const response = await postData('http://localhost:3000/api/developers', data);
+        const response = await postData('https://assignment-x3rl.onrender.com/api/developers', data);
         console.log(response);
     }
 
@@ -31,7 +31,7 @@ form.addEventListener('submit', async (e) => {
 });
 
 async function loadDevelopers() {
-    const developers = await fetchData('http://localhost:3000/api/developers');
+    const developers = await fetchData('https://assignment-x3rl.onrender.com/api/developers');
     const tableBody = document.getElementById('developersTable').querySelector('tbody');
     tableBody.innerHTML = ''; // Clear previous rows
 
@@ -55,7 +55,7 @@ async function loadDevelopers() {
 }
 
 async function editDeveloper(id) {
-    const developer = await fetchData(`http://localhost:3000/api/developers/${id}`);
+    const developer = await fetchData(`https://assignment-x3rl.onrender.com/api/developers/${id}`);
     document.getElementById('developerName').value = developer.developerName;
     document.getElementById('email').value = developer.email;
     document.getElementById('address').value = developer.address;
@@ -70,7 +70,7 @@ async function editDeveloper(id) {
 }
 
 async function deleteDeveloper(id) {
-    await deleteData(`http://localhost:3000/api/developers/${id}`);
+    await deleteData(`https://assignment-x3rl.onrender.com/api/developers/${id}`);
     loadDevelopers(); // Refresh list after deletion
 }
 

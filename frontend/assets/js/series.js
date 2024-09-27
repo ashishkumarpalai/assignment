@@ -20,18 +20,18 @@ seriesForm.addEventListener('submit', async (e) => {
 
     if (editingSeriesId) {
         // Update existing series
-        await putData(`http://localhost:3000/api/series/${editingSeriesId}`, data);
+        await putData(`https://assignment-x3rl.onrender.com/api/series/${editingSeriesId}`, data);
         editingSeriesId = null; // Reset editing ID
     } else {
         // Create new series
-        await postData('http://localhost:3000/api/series', data);
+        await postData('https://assignment-x3rl.onrender.com/api/series', data);
     }
     loadSeries(); // Reload series after submission
     seriesForm.reset(); // Reset the form fields
 });
 
 async function loadSeries() {
-    const series = await fetchData('http://localhost:3000/api/series');
+    const series = await fetchData('https://assignment-x3rl.onrender.com/api/series');
     const tableBody = document.getElementById('seriesTable').querySelector('tbody');
     tableBody.innerHTML = ''; // Clear previous rows
 
@@ -57,7 +57,7 @@ async function loadSeries() {
 loadSeries();
 
 async function editSeries(id) {
-    const series = await fetchData(`http://localhost:3000/api/series/${id}`);
+    const series = await fetchData(`https://assignment-x3rl.onrender.com/api/series/${id}`);
     document.getElementById('seriesName').value = series.seriesName;
     document.getElementById('towerId').value = series.towerId;
     document.getElementById('seriesTypology').value = series.seriesTypology;
@@ -73,7 +73,7 @@ async function editSeries(id) {
 
 async function deleteSeries(id) {
     if (confirm("Are you sure you want to delete this series?")) {
-        await fetch(`http://localhost:3000/api/series/${id}`, {
+        await fetch(`https://assignment-x3rl.onrender.com/api/series/${id}`, {
             method: 'DELETE'
         });
         loadSeries(); // Reload series after deletion

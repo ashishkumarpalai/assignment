@@ -28,18 +28,18 @@ towerForm.addEventListener('submit', async (e) => {
 
     if (editingTowerId) {
         // Update existing tower
-        await putData(`http://localhost:3000/api/towers/${editingTowerId}`, data);
+        await putData(`https://assignment-x3rl.onrender.com/api/towers/${editingTowerId}`, data);
         editingTowerId = null; // Reset editing ID
     } else {
         // Create new tower
-        await postData('http://localhost:3000/api/towers', data);
+        await postData('https://assignment-x3rl.onrender.com/api/towers', data);
     }
     loadTowers(); // Reload towers after submission
     towerForm.reset(); // Reset the form fields
 });
 
 async function loadTowers() {
-    const towers = await fetchData('http://localhost:3000/api/towers');
+    const towers = await fetchData('https://assignment-x3rl.onrender.com/api/towers');
     const tableBody = document.getElementById('towersTable').querySelector('tbody');
     tableBody.innerHTML = ''; // Clear previous rows
 
@@ -69,7 +69,7 @@ async function loadTowers() {
 }
 loadTowers(); // Load towers on page load
 async function editTower(id) {
-    const tower = await fetchData(`http://localhost:3000/api/towers/${id}`);
+    const tower = await fetchData(`https://assignment-x3rl.onrender.com/api/towers/${id}`);
     document.getElementById('towerName').value = tower.towerName;
     document.getElementById('towerNumber').value = tower.towerNumber;
     document.getElementById('deliveryTimeline').value = tower.deliveryTimeline;
@@ -93,7 +93,7 @@ async function editTower(id) {
 
 async function deleteTower(id) {
     if (confirm("Are you sure you want to delete this tower?")) {
-        await fetch(`http://localhost:3000/api/towers/${id}`, {
+        await fetch(`https://assignment-x3rl.onrender.com/api/towers/${id}`, {
             method: 'DELETE'
         });
         loadTowers(); // Reload towers after deletion
