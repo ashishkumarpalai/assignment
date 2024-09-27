@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Management</title>
+    <link rel="stylesheet" href="assets/css/series.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Series Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="developer.html">Developers</a></li>
+                    <li><a href="tower.html">Towers</a></li>
+                    <li><a href="series.html">Series</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="series-form">
+                <h2>Add/Edit Series</h2>
+                <form id="seriesForm">
+                    <input type="text" id="seriesName" placeholder="Series Name" required>
+                    <input type="text" id="towerId" placeholder="Tower ID" required>
+                    <input type="text" id="seriesTypology" placeholder="Series Typology" required>
+                    <input type="number" id="bed" placeholder="Number of Beds" required>
+                    <input type="text" id="dimension" placeholder="Dimension (sq.ft)" required>
+                    <input type="number" id="bath" placeholder="Number of Baths" required>
+                    <input type="text" id="direction" placeholder="Direction" required>
+                    <input type="text" id="addOns" placeholder="Add-Ons (comma-separated)" required>
+                    <button type="submit">Add Series</button>
+                </form>
+            </section>
+
+            <section class="series-list">
+                <h2>Series List</h2>
+                <div class="table-container">
+                    <table id="seriesTable">
+                        <thead>
+                            <tr>
+                                <th>Series Name</th>
+                                <th>Tower ID</th>
+                                <th>Series Typology</th>
+                                <th>Beds</th>
+                                <th>Dimension</th>
+                                <th>Baths</th>
+                                <th>Direction</th>
+                                <th>Add-Ons</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic series rows go here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Series Management. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/series.js"></script>
+</body>
+
+</html>

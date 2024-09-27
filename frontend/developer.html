@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Management</title>
+    <link rel="stylesheet" href="assets/css/developers.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Developer Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="developer.html">Developers</a></li> -->
+                    <li><a href="tower.html">Towers</a></li>
+                    <li><a href="series.html">Series</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Form for adding/updating a developer -->
+        <form id="developerForm">
+            <h2>Add/Update Developer</h2>
+            <input type="text" id="developerName" placeholder="Developer Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="date" id="incorporationDate" placeholder="Incorporation Date" required>
+            <input type="number" id="totalProjectsDelivered" placeholder="Total Projects Delivered" required>
+            <input type="number" id="totalSqFtDelivered" placeholder="Total Sq Ft Delivered" required>
+            <textarea id="reasonForChoosingDeveloper" placeholder="Reason for Choosing Developer" required></textarea>
+            <input type="url" id="websiteLink" placeholder="Website Link" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Display developers -->
+        <div id="developersList">
+            <h2>Developers List</h2>
+            <div class="table-container">
+                <table id="developersTable">
+                    <thead>
+                        <tr>
+                            <th>Developer Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Incorporation Date</th>
+                            <th>Total Projects Delivered</th>
+                            <th>Total Sq Ft Delivered</th>
+                            <th>Reason for Choosing Developer</th>
+                            <th>Website Link</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic developer rows go here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/developers.js"></script>
+</body>
+
+</html>

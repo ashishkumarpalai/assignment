@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Management</title>
+    <link rel="stylesheet" href="assets/css/project.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Projects Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li><a href="projects.html">Projects</a></li> -->
+                    <li><a href="developer.html">Developers</a></li>
+                    <li><a href="tower.html">Towers</a></li>
+                    <li><a href="series.html">Series</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="project-form">
+                <h2>Add/Edit Project</h2>
+                <form id="projectForm">
+                    <input type="text" id="projectDetails" placeholder="Project Details" required>
+                    <input type="number" id="expenditure" placeholder="Expenditure" required>
+                    <input type="number" id="budget" placeholder="Budget" required>
+                    <input type="text" id="developerId" placeholder="Developer ID" required>
+                    <input type="url" id="mediaLinks" placeholder="Media Links (comma separated)" required>
+                    <label>
+                        RERA Status:
+                        <input type="checkbox" id="reraStatus">
+                    </label>
+                    <button type="submit">Add Project</button>
+                </form>
+            </section>
+
+            <section class="project-list">
+                <h2>Projects List</h2>
+                <div class="table-container">
+                    <table id="projectsTable">
+                        <thead>
+                            <tr>
+                                <th>Project Details</th>
+                                <th>Expenditure</th>
+                                <th>Budget</th>
+                                <th>Developer ID</th>
+                                <th>RERA Status</th>
+                                <th>Media</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic project rows go here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Developer Management. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/project.js"></script>
+</body>
+
+</html>

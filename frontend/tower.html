@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Management</title>
+    <link rel="stylesheet" href="assets/css/tower.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tower Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="developer.html">Developers</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="tower.html">Towers</a></li> -->
+                    <li><a href="series.html">Series</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="tower-form">
+                <h2>Add/Edit Tower</h2>
+
+                <form id="towerForm">
+                    <input type="text" id="towerName" placeholder="Tower Name" required>
+                    <input type="number" id="towerNumber" placeholder="Tower Number" required>
+                    <input type="date" id="deliveryTimeline" placeholder="Delivery Timeline" required>
+                    <input type="text" id="developerId" placeholder="Developer ID" required>
+                    <input type="text" id="towerPhase" placeholder="Tower Phase" required>
+                    <input type="number" id="totalFloors" placeholder="Total Floors" required>
+                    <input type="text" id="parkingLevels" placeholder="Parking Levels" required>
+                    <input type="text" id="lobby" placeholder="Lobby Details" required>
+                    <input type="number" id="totalApartments" placeholder="Total Apartments" required>
+                    <input type="text" id="terrace" placeholder="Terrace Details" required>
+                    <input type="text" id="phaseReraNumber" placeholder="Phase RERA Number" required>
+                    <input type="text" id="projectId" placeholder="Project ID" required>
+                    <input type="text" id="currentStatus" placeholder="Current Status" required>
+
+                    <label>
+                        Duplicate Tower Option:
+                        <input type="checkbox" id="duplicateTowerOption">
+                    </label>
+                    <button type="submit">Add Tower</button>
+                </form>
+            </section>
+
+            <section class="tower-list">
+                <h2>Tower List</h2>
+                <div class="table-container">
+                    <table id="towersTable">
+                        <thead>
+                            <tr>
+                                <th>Tower Name</th>
+                                <th>Tower Number</th>
+                                <th>Delivery Timeline</th>
+                                <th>Developer ID</th>
+                                <th>Tower Phase</th>
+                                <th>Total Floors</th>
+                                <th>Parking Levels</th>
+                                <th>Lobby Details</th>
+                                <th>Total Apartments</th>
+                                <th>Terrace Details</th>
+                                <th>Phase RERA Number</th>
+                                <th>Duplicate Tower Option</th>
+                                <th>Projects ID</th>
+                                <th>Current Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic tower rows go here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Tower Management. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/tower.js"></script>
+</body>
+
+</html>
