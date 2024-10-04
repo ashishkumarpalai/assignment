@@ -3,6 +3,12 @@
 ### **Project Overview**
 <br>[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/24840024-7534fb0e-cdf9-4c1e-bae5-7b10b4476b1c?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D24840024-7534fb0e-cdf9-4c1e-bae5-7b10b4476b1c%26entityType%3Dcollection%26workspaceId%3D9de6f216-2798-4a99-b5f0-700b40ee712a)
 
+Backend Link
+https://assignment-x3rl.onrender.com/ 
+<br>
+Frontend Link
+https://real-estate-project-firebase-firestor.netlify.app/
+
 This Real Estate Management System is a backend API built using **Node.js**, **Express.js**, and **Firebase Firestore** for database management. It is designed to manage data related to **Developers**, **Projects**, **Towers**, and **Series** in a real estate ecosystem. The system provides a well-structured set of CRUD (Create, Read, Update, Delete) operations for each module while ensuring proper validation, error handling, and data consistency across related entities.
 
 The project adheres to the **MVC architecture**, which separates concerns between models, views (though not applicable for this API), and controllers.
