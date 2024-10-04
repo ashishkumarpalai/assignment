@@ -4,6 +4,7 @@ const developerRoutes = require('./routes/developerRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const towerRoutes = require('./routes/towerRoutes');
 const seriesRoutes = require('./routes/seriesRoutes');
+const userRoutes = require('./routes/userRoutes');
 const cors = require("cors")
 
 const app = express();
@@ -15,6 +16,7 @@ app.use('/api/developers', developerRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/towers', towerRoutes);
 app.use('/api/series', seriesRoutes);
+app.use('/api/users', userRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
